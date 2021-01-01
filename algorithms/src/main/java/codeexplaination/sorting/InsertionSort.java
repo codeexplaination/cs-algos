@@ -29,7 +29,7 @@ public class InsertionSort {
         for (int i : input) {
             System.out.print(" " + i);
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static void main(String[] args) {
