@@ -15,7 +15,7 @@ public class BubbleSort
         printHelper("Input array is: ", input);
         for(int i=0; i<size; i++){
             for (int j=0; j<size; j++){
-                if(input[i] > input[j]){
+                if(input[i] < input[j]){
                     int temp = input[i];
                     input[i] = input[j];
                     input[j] = temp;
@@ -28,14 +28,14 @@ public class BubbleSort
     private static void printHelper(String s, int[] input) {
         System.out.print(s);
         for(int i : input){
-            System.out.print(" " + input[i]);
+            System.out.print(" " + i);
         }
         System.out.println("");
     }
 
     public static void main( String[] args )
     {
-        int[] input = {2, 4, 3, -1, 8, 5};
+        int[] input = {4, 2, 3, -1, 8, 5};
         sort(input);
     }
 }
