@@ -10,12 +10,12 @@ package codeexplaination.trees;
  */
 public class BinarySearchTree {
 
-    class Node {
+    private class Node {
         int data;
         Node left;
         Node right;
 
-        public Node(int data) {
+        Node(int data) {
             this.data = data;
             left = null;
             right = null;
@@ -39,7 +39,7 @@ public class BinarySearchTree {
         root = insertRec(root, data);
     }
 
-    public Node insertRec(Node root, int data) {
+    private Node insertRec(Node root, int data) {
         if (root == null) {
             root = new Node(data);
         }
