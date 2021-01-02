@@ -45,7 +45,6 @@ public class SingleLinkedList {
     }
 
     public static void main(String[] args) {
-        // TODO: Complete this code
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         singleLinkedList.push(10);
         singleLinkedList.push(30);
