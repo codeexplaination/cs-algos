@@ -1,5 +1,8 @@
 package codeexplaination.trees.traversal;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * This is also called as level order traversal
  */
@@ -51,11 +54,14 @@ public class BFS {
         }
     }
 
-    public void printBFS() {
+    public void printBFSUsingRecursion() {
+        System.out.println();
+        System.out.println("BFS Using recursion is: ");
         int height = getHeight(root);
         for (int i = 1; i <= height; i++) {
             printLevelOrder(root, i);
         }
+        System.out.println();
     }
 
     private void printLevelOrder(Node root, int level) {
@@ -69,6 +75,29 @@ public class BFS {
             printLevelOrder(root.left, level - 1);
             printLevelOrder(root.right, level - 1);
         }
+    }
+
+    public void printBFSUsingQueue() {
+        System.out.println();
+        System.out.println("BFS Using Queue is: ");
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+
+            System.out.print(node.data + " ");
+
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -91,6 +120,7 @@ public class BFS {
         //   12     22           53     95
 
         System.out.println("Height of the tree is: " + bfs.getHeight(bfs.root));
-        bfs.printBFS();
+        bfs.printBFSUsingRecursion();
+        bfs.printBFSUsingQueue();
     }
 }
