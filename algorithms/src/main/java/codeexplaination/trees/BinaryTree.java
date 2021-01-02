@@ -1,19 +1,9 @@
 package codeexplaination.trees;
 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
-
-    public Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
-
 public class BinaryTree {
+
+
     // Root of Binary Tree
     Node root;
 
@@ -81,5 +71,17 @@ public class BinaryTree {
           null null
          */
 
+    }
+}
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    public Node(int data) {
+        this.data = data;
+        left = null;
+        right = null;
     }
 }
